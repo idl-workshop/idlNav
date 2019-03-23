@@ -1,25 +1,18 @@
+import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
 
-import { IonicModule } from '@ionic/angular';
+import { SubtabsPageRoutingModule } from './subtabs.router.module';
 
 import { SubtabsPage } from './subtabs.page';
 
-const routes: Routes = [
-  {
-    path: '',
-    component: SubtabsPage
-  }
-];
-
 @NgModule({
   imports: [
+    IonicModule,
     CommonModule,
     FormsModule,
-    IonicModule,
-    RouterModule.forChild(routes)
+    SubtabsPageRoutingModule
   ],
   declarations: [SubtabsPage]
 })

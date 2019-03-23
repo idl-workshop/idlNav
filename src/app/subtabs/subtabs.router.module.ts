@@ -1,49 +1,49 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TabsPage } from './tabs.page';
+import { SubtabsPage } from './subtabs.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
-    component: TabsPage,
+    path: 'subtabs',
+    component: SubtabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'subtab1',
         children: [
           {
             path: '',
-            loadChildren: '../tab1/tab1.module#Tab1PageModule'
+            loadChildren: '../subtab1/subtab1.module#Subtab1PageModule'
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'subtab2',
         children: [
           {
             path: '',
-            loadChildren: '../tab2/tab2.module#Tab2PageModule'
+            loadChildren: '../subtab2/subtab2.module#Subtab2PageModule'
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'subtab3',
         children: [
           {
             path: '',
-            loadChildren: '../tab3/tab3.module#Tab3PageModule'
+            loadChildren: '../subtab3/subtab3.module#Subtab3PageModule'
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/subtabs/subtab1',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/subtabs/subtab1',
     pathMatch: 'full'
   }
 ];
@@ -54,4 +54,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class TabsPageRoutingModule {}
+export class SubtabsPageRoutingModule {}
