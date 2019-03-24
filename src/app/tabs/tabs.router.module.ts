@@ -35,6 +35,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'subtabs',
+        children: [
+          {
+            path: '',
+            loadChildren: '../subtabs/subtabs.module#SubtabsPageModule'
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
