@@ -10,10 +10,10 @@ const routes: Routes = [
       {
         path: 'tab1',
         children: [
-          {
-            path: 'step',
-            loadChildren: '../step/step.module#StepPageModule',
-          },
+          // {
+          //   path: 'step',
+          //   loadChildren: '../step/step.module#StepPageModule',
+          // },
           {
             path: '',
             loadChildren: '../tab1/tab1.module#Tab1PageModule'

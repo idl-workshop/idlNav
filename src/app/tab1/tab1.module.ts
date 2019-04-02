@@ -9,12 +9,12 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
-    // children: [
-    //   {
-    //     path: 'step',
-    //     loadChildren: '../step/step.module#StepPageModule',
-    //   }
-    // ]
+    children: [
+      {
+        path: 'step',
+        loadChildren: '../step/step.module#StepPageModule',
+      }
+    ]
   }
 ]
 
