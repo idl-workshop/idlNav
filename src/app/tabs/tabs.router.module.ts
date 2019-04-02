@@ -11,9 +11,13 @@ const routes: Routes = [
         path: 'tab1',
         children: [
           {
+            path: 'step',
+            loadChildren: '../step/step.module#StepPageModule',
+          },
+          {
             path: '',
             loadChildren: '../tab1/tab1.module#Tab1PageModule'
-          }
+          },
         ]
       },
       {
@@ -34,18 +38,18 @@ const routes: Routes = [
           }
         ]
       },
-      {
-        path: 'subtabs',
-        children: [
-          {
-            path: '',
-            loadChildren: '../subtabs/subtabs.module#SubtabsPageModule'
-          }
-        ]
-      },
+      // {
+      //   path: 'tab4',
+      //   children: [
+      //     {
+      //       path: '',
+      //       loadChildren: '../subtabs/subtabs.module#SubtabsPageModule'
+      //     }
+      //   ]
+      // },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/tab1/step',
         pathMatch: 'full'
       }
     ]

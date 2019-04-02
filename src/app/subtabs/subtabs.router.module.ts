@@ -36,14 +36,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/subtabs/subtab1',
+        redirectTo: 'subtabs/subtab1',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/subtabs/subtab1',
+    redirectTo: 'subtabs/subtab1',
     pathMatch: 'full'
   }
 ];
